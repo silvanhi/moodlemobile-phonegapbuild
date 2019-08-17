@@ -1,86 +1,36 @@
 webpackJsonp([50],{
 
-/***/ 2078:
+/***/ 1956:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCoursesCoursePreviewPageModule", function() { return CoreCoursesCoursePreviewPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__course_preview__ = __webpack_require__(2228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(65);
-// (C) Copyright 2015 Martin Dougiamas
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
 
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(8);
 
+// EXTERNAL MODULE: ./node_modules/@ionic-native/splash-screen/index.js
+var splash_screen = __webpack_require__(716);
 
+// EXTERNAL MODULE: ./src/providers/app.ts
+var app = __webpack_require__(9);
 
+// EXTERNAL MODULE: ./src/providers/init.ts
+var init = __webpack_require__(142);
 
+// EXTERNAL MODULE: ./src/providers/sites.ts
+var sites = __webpack_require__(1);
 
-var CoreCoursesCoursePreviewPageModule = /** @class */ (function () {
-    function CoreCoursesCoursePreviewPageModule() {
-    }
-    CoreCoursesCoursePreviewPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__course_preview__["a" /* CoreCoursesCoursePreviewPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__course_preview__["a" /* CoreCoursesCoursePreviewPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
-        })
-    ], CoreCoursesCoursePreviewPageModule);
-    return CoreCoursesCoursePreviewPageModule;
-}());
+// EXTERNAL MODULE: ./src/core/constants.ts
+var constants = __webpack_require__(39);
 
-//# sourceMappingURL=course-preview.module.js.map
+// EXTERNAL MODULE: ./src/core/login/providers/helper.ts
+var helper = __webpack_require__(82);
 
-/***/ }),
-
-/***/ 2228:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCoursesCoursePreviewPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_courses__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_course_providers_options_delegate__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_course_providers_course__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__core_course_providers_helper__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__core_course_providers_format_delegate__ = __webpack_require__(117);
+// CONCATENATED MODULE: ./src/core/login/pages/init/init.ts
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -111,419 +61,274 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
-
-
 /**
- * Page that allows "previewing" a course and enrolling in it if enabled and not enrolled.
+ * Page that displays a "splash screen" while the app is being initialized.
  */
-var CoreCoursesCoursePreviewPage = /** @class */ (function () {
-    function CoreCoursesCoursePreviewPage(navCtrl, navParams, sitesProvider, domUtils, textUtils, appProvider, coursesProvider, platform, modalCtrl, translate, eventsProvider, courseOptionsDelegate, courseHelper, courseProvider, courseFormatDelegate, zone) {
-        var _this = this;
+var init_CoreLoginInitPage = /** @class */ (function () {
+    function CoreLoginInitPage(navCtrl, appProvider, initDelegate, sitesProvider, loginHelper, splashScreen) {
         this.navCtrl = navCtrl;
+        this.appProvider = appProvider;
+        this.initDelegate = initDelegate;
         this.sitesProvider = sitesProvider;
-        this.domUtils = domUtils;
-        this.textUtils = textUtils;
-        this.coursesProvider = coursesProvider;
-        this.platform = platform;
-        this.modalCtrl = modalCtrl;
-        this.translate = translate;
-        this.eventsProvider = eventsProvider;
-        this.courseOptionsDelegate = courseOptionsDelegate;
-        this.courseHelper = courseHelper;
-        this.courseProvider = courseProvider;
-        this.courseFormatDelegate = courseFormatDelegate;
-        this.zone = zone;
-        this.canAccessCourse = true;
-        this.component = 'CoreCoursesCoursePreview';
-        this.selfEnrolInstances = [];
-        this.avoidOpenCourse = false;
-        this.prefetchCourseData = {
-            downloadSucceeded: false,
-            prefetchCourseIcon: 'spinner',
-            title: 'core.course.downloadcourse'
-        };
-        this.isGuestEnabled = false;
-        this.waitStart = 0;
-        this.pageDestroyed = false;
-        this.course = navParams.get('course');
-        this.avoidOpenCourse = navParams.get('avoidOpenCourse');
-        this.isMobile = appProvider.isMobile();
-        this.isDesktop = appProvider.isDesktop();
-        this.downloadCourseEnabled = !this.coursesProvider.isDownloadCourseDisabledInSite();
-        if (this.downloadCourseEnabled) {
-            // Listen for status change in course.
-            this.courseStatusObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */].COURSE_STATUS_CHANGED, function (data) {
-                if (data.courseId == _this.course.id || data.courseId == __WEBPACK_IMPORTED_MODULE_10__core_course_providers_course__["a" /* CoreCourseProvider */].ALL_COURSES_CLEARED) {
-                    _this.updateCourseStatus(data.status);
-                }
-            }, this.sitesProvider.getCurrentSiteId());
-        }
+        this.loginHelper = loginHelper;
+        this.splashScreen = splashScreen;
     }
     /**
      * View loaded.
      */
-    CoreCoursesCoursePreviewPage.prototype.ionViewDidLoad = function () {
+    CoreLoginInitPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        var currentSite = this.sitesProvider.getCurrentSite(), currentSiteUrl = currentSite && currentSite.getURL();
-        this.paypalEnabled = this.course.enrollmentmethods && this.course.enrollmentmethods.indexOf('paypal') > -1;
-        this.guestWSAvailable = this.coursesProvider.isGuestWSAvailable();
-        this.enrolUrl = this.textUtils.concatenatePaths(currentSiteUrl, 'enrol/index.php?id=' + this.course.id);
-        this.courseUrl = this.textUtils.concatenatePaths(currentSiteUrl, 'course/view.php?id=' + this.course.id);
-        this.paypalReturnUrl = this.textUtils.concatenatePaths(currentSiteUrl, 'enrol/paypal/return.php');
-        if (this.course.overviewfiles && this.course.overviewfiles.length > 0) {
-            this.course.courseImage = this.course.overviewfiles[0].fileurl;
-        }
-        // Initialize the self enrol modal.
-        this.selfEnrolModal = this.modalCtrl.create('CoreCoursesSelfEnrolPasswordPage');
-        this.selfEnrolModal.onDidDismiss(function (password) {
-            if (typeof password != 'undefined') {
-                _this.selfEnrolInCourse(password, _this.currentInstanceId);
-            }
-        });
-        this.getCourse().finally(function () {
-            if (!_this.downloadCourseEnabled) {
-                // Cannot download the whole course, stop.
-                return;
-            }
-            // Determine course prefetch icon.
-            _this.courseHelper.getCourseStatusIconAndTitle(_this.course.id).then(function (data) {
-                _this.prefetchCourseData.prefetchCourseIcon = data.icon;
-                _this.prefetchCourseData.title = data.title;
-                if (data.icon == 'spinner') {
-                    // Course is being downloaded. Get the download promise.
-                    var promise = _this.courseHelper.getCourseDownloadPromise(_this.course.id);
-                    if (promise) {
-                        // There is a download promise. If it fails, show an error.
-                        promise.catch(function (error) {
-                            if (!_this.pageDestroyed) {
-                                _this.domUtils.showErrorModalDefault(error, 'core.course.errordownloadingcourse', true);
+        // Wait for the app to be ready.
+        this.initDelegate.ready().then(function () {
+            // Check if there was a pending redirect.
+            var redirectData = _this.appProvider.getRedirect();
+            if (redirectData.siteId) {
+                // Unset redirect data.
+                _this.appProvider.storeRedirect('', '', '');
+                // Only accept the redirect if it was stored less than 20 seconds ago.
+                if (Date.now() - redirectData.timemodified < 20000) {
+                    if (redirectData.siteId != constants["a" /* CoreConstants */].NO_SITE_ID) {
+                        // The redirect is pointing to a site, load it.
+                        return _this.sitesProvider.loadSite(redirectData.siteId, redirectData.page, redirectData.params)
+                            .then(function (loggedIn) {
+                            if (loggedIn) {
+                                return _this.loginHelper.goToSiteInitialPage(_this.navCtrl, redirectData.page, redirectData.params, { animate: false });
                             }
+                        }).catch(function () {
+                            // Site doesn't exist.
+                            return _this.loadPage();
                         });
                     }
                     else {
-                        // No download, this probably means that the app was closed while downloading. Set previous status.
-                        _this.courseProvider.setCoursePreviousStatus(_this.course.id);
+                        // No site to load, open the page.
+                        return _this.loginHelper.goToNoSitePage(_this.navCtrl, redirectData.page, redirectData.params);
                     }
                 }
-            });
-        });
-    };
-    /**
-     * Page destroyed.
-     */
-    CoreCoursesCoursePreviewPage.prototype.ngOnDestroy = function () {
-        this.pageDestroyed = true;
-        if (this.courseStatusObserver) {
-            this.courseStatusObserver.off();
-        }
-    };
-    /**
-     * Check if the user can access as guest.
-     *
-     * @return {Promise<boolean>} Promise resolved if can access as guest, rejected otherwise. Resolve param indicates if
-     *                            password is required for guest access.
-     */
-    CoreCoursesCoursePreviewPage.prototype.canAccessAsGuest = function () {
-        if (!this.isGuestEnabled) {
-            return Promise.reject(null);
-        }
-        // Search instance ID of guest enrolment method.
-        this.guestInstanceId = undefined;
-        for (var i = 0; i < this.enrollmentMethods.length; i++) {
-            var method = this.enrollmentMethods[i];
-            if (method.type == 'guest') {
-                this.guestInstanceId = method.id;
-                break;
             }
-        }
-        if (this.guestInstanceId) {
-            return this.coursesProvider.getCourseGuestEnrolmentInfo(this.guestInstanceId).then(function (info) {
-                if (!info.status) {
-                    // Not active, reject.
-                    return Promise.reject(null);
-                }
-                return info.passwordrequired;
-            });
-        }
-        return Promise.reject(null);
-    };
-    /**
-     * Convenience function to get course. We use this to determine if a user can see the course or not.
-     *
-     * @param {boolean} refresh Whether the user is refreshing the data.
-     */
-    CoreCoursesCoursePreviewPage.prototype.getCourse = function (refresh) {
-        var _this = this;
-        // Get course enrolment methods.
-        this.selfEnrolInstances = [];
-        return this.coursesProvider.getCourseEnrolmentMethods(this.course.id).then(function (methods) {
-            _this.enrollmentMethods = methods;
-            _this.enrollmentMethods.forEach(function (method) {
-                if (method.type === 'self') {
-                    _this.selfEnrolInstances.push(method);
-                }
-                else if (_this.guestWSAvailable && method.type === 'guest') {
-                    _this.isGuestEnabled = true;
-                }
-            });
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'Error getting enrolment data');
+            return _this.loadPage();
         }).then(function () {
-            // Check if user is enrolled in the course.
-            return _this.coursesProvider.getUserCourse(_this.course.id).then(function (course) {
-                _this.isEnrolled = true;
-                return course;
-            }).catch(function () {
-                // The user is not enrolled in the course. Use getCourses to see if it's an admin/manager and can see the course.
-                _this.isEnrolled = false;
-                return _this.coursesProvider.getCourse(_this.course.id);
-            }).then(function (course) {
-                // Success retrieving the course, we can assume the user has permissions to view it.
-                _this.course.fullname = course.fullname || _this.course.fullname;
-                _this.course.summary = course.summary || _this.course.summary;
-                _this.canAccessCourse = true;
-            }).catch(function () {
-                // The user is not an admin/manager. Check if we can provide guest access to the course.
-                return _this.canAccessAsGuest().then(function (passwordRequired) {
-                    _this.canAccessCourse = !passwordRequired;
-                }).catch(function () {
-                    _this.canAccessCourse = false;
-                });
-            });
-        }).finally(function () {
-            if (!_this.sitesProvider.getCurrentSite().isVersionGreaterEqualThan('3.7')) {
-                return _this.coursesProvider.isGetCoursesByFieldAvailableInSite().then(function (available) {
-                    if (available) {
-                        return _this.coursesProvider.getCourseByField('id', _this.course.id).then(function (course) {
-                            _this.course.customfields = course.customfields;
-                        });
-                    }
-                }).catch(function () {
-                    // Ignore errors.
-                });
-            }
-        }).finally(function () {
-            _this.dataLoaded = true;
+            // If we hide the splash screen now, the init view is still seen for an instant. Wait a bit to make sure it isn't seen.
+            setTimeout(function () {
+                _this.splashScreen.hide();
+            }, 100);
         });
     };
     /**
-     * Open the course.
+     * Load the right page.
+     *
+     * @return {Promise<any>} Promise resolved when done.
      */
-    CoreCoursesCoursePreviewPage.prototype.openCourse = function () {
-        if (!this.canAccessCourse || this.avoidOpenCourse) {
-            // Course cannot be opened or we are avoiding opening because we accessed from inside a course.
-            return;
+    CoreLoginInitPage.prototype.loadPage = function () {
+        var _this = this;
+        if (this.sitesProvider.isLoggedIn()) {
+            if (!this.loginHelper.isSiteLoggedOut()) {
+                // User is logged in, go to site initial page.
+                return this.loginHelper.goToSiteInitialPage();
+            }
+            else {
+                // The site is marked as logged out. Logout and try again.
+                return this.sitesProvider.logout().then(function () {
+                    return _this.loadPage();
+                });
+            }
         }
-        this.courseFormatDelegate.openCourse(this.navCtrl, this.course);
-    };
-    /**
-     * Enrol using PayPal.
-     */
-    CoreCoursesCoursePreviewPage.prototype.paypalEnrol = function () {
-        var _this = this;
-        var window, hasReturnedFromPaypal = false, inAppLoadSubscription, inAppFinishSubscription, inAppExitSubscription, appResumeSubscription;
-        var urlLoaded = function (event) {
-            if (event.url.indexOf(_this.paypalReturnUrl) != -1) {
-                hasReturnedFromPaypal = true;
-            }
-            else if (event.url.indexOf(_this.courseUrl) != -1 && hasReturnedFromPaypal) {
-                // User reached the course index page after returning from PayPal, close the InAppBrowser.
-                inAppClosed();
-                window.close();
-            }
-        }, inAppClosed = function () {
-            // InAppBrowser closed, refresh data.
-            unsubscribeAll();
-            if (!_this.dataLoaded) {
-                return;
-            }
-            _this.dataLoaded = false;
-            _this.refreshData();
-        }, unsubscribeAll = function () {
-            inAppLoadSubscription && inAppLoadSubscription.unsubscribe();
-            inAppFinishSubscription && inAppFinishSubscription.unsubscribe();
-            inAppExitSubscription && inAppExitSubscription.unsubscribe();
-            appResumeSubscription && appResumeSubscription.unsubscribe();
-        };
-        // Open the enrolment page in InAppBrowser.
-        this.sitesProvider.getCurrentSite().openInAppWithAutoLogin(this.enrolUrl).then(function (w) {
-            window = w;
-            if (_this.isDesktop || _this.isMobile) {
-                // Observe loaded pages in the InAppBrowser to check if the enrol process has ended.
-                inAppLoadSubscription = window.on('loadstart').subscribe(function (event) {
-                    // Execute the callback in the Angular zone, so change detection doesn't stop working.
-                    _this.zone.run(function () { return urlLoaded(event); });
-                });
-                // Observe window closed.
-                inAppExitSubscription = window.on('exit').subscribe(function () {
-                    // Execute the callback in the Angular zone, so change detection doesn't stop working.
-                    _this.zone.run(inAppClosed);
-                });
-            }
-            if (_this.isDesktop) {
-                // In desktop, also observe stop loading since some pages don't throw the loadstart event.
-                inAppFinishSubscription = window.on('loadstop').subscribe(urlLoaded);
-                // Since the user can switch windows, reload the data if he comes back to the app.
-                appResumeSubscription = _this.platform.resume.subscribe(function () {
-                    if (!_this.dataLoaded) {
-                        return;
-                    }
-                    _this.dataLoaded = false;
-                    _this.refreshData();
-                });
-            }
-        });
-    };
-    /**
-     * User clicked in a self enrol button.
-     *
-     * @param {number} instanceId The instance ID of the enrolment method.
-     */
-    CoreCoursesCoursePreviewPage.prototype.selfEnrolClicked = function (instanceId) {
-        var _this = this;
-        this.domUtils.showConfirm(this.translate.instant('core.courses.confirmselfenrol')).then(function () {
-            _this.selfEnrolInCourse('', instanceId);
-        }).catch(function () {
-            // User cancelled.
-        });
-    };
-    /**
-     * Self enrol in a course.
-     *
-     * @param {string} password Password to use.
-     * @param {number} instanceId The instance ID.
-     * @return {Promise<any>} Promise resolved when self enrolled.
-     */
-    CoreCoursesCoursePreviewPage.prototype.selfEnrolInCourse = function (password, instanceId) {
-        var _this = this;
-        var modal = this.domUtils.showModalLoading('core.loading', true);
-        return this.coursesProvider.selfEnrol(this.course.id, password, instanceId).then(function () {
-            // Close modal and refresh data.
-            _this.isEnrolled = true;
-            _this.dataLoaded = false;
-            // Sometimes the list of enrolled courses takes a while to be updated. Wait for it.
-            _this.waitForEnrolled(true).then(function () {
-                _this.refreshData().finally(function () {
-                    // My courses have been updated, trigger event.
-                    _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_8__providers_courses__["a" /* CoreCoursesProvider */].EVENT_MY_COURSES_UPDATED, { course: _this.course }, _this.sitesProvider.getCurrentSiteId());
-                });
-            });
-        }).catch(function (error) {
-            if (error && error.code === __WEBPACK_IMPORTED_MODULE_8__providers_courses__["a" /* CoreCoursesProvider */].ENROL_INVALID_KEY) {
-                // Invalid password, show the modal to enter the password.
-                _this.selfEnrolModal.present();
-                _this.currentInstanceId = instanceId;
-                if (!password) {
-                    // No password entered, don't show error.
-                    return;
+        else {
+            return this.sitesProvider.hasSites().then(function (hasSites) {
+                if (hasSites) {
+                    return _this.navCtrl.setRoot('CoreLoginSitesPage');
                 }
-            }
-            _this.domUtils.showErrorModalDefault(error, 'core.courses.errorselfenrol', true);
-        }).finally(function () {
-            modal.dismiss();
-        });
-    };
-    /**
-     * Refresh the data.
-     *
-     * @param {any} [refresher] The refresher if this was triggered by a Pull To Refresh.
-     */
-    CoreCoursesCoursePreviewPage.prototype.refreshData = function (refresher) {
-        var _this = this;
-        var promises = [];
-        promises.push(this.coursesProvider.invalidateUserCourses());
-        promises.push(this.coursesProvider.invalidateCourse(this.course.id));
-        promises.push(this.coursesProvider.invalidateCourseEnrolmentMethods(this.course.id));
-        promises.push(this.courseOptionsDelegate.clearAndInvalidateCoursesOptions(this.course.id));
-        if (this.sitesProvider.getCurrentSite().isVersionGreaterEqualThan('3.7')) {
-            promises.push(this.coursesProvider.invalidateCoursesByField('id', this.course.id));
-        }
-        if (this.guestInstanceId) {
-            promises.push(this.coursesProvider.invalidateCourseGuestEnrolmentInfo(this.guestInstanceId));
-        }
-        return Promise.all(promises).finally(function () {
-            return _this.getCourse(true);
-        }).finally(function () {
-            if (refresher) {
-                refresher.complete();
-            }
-        });
-    };
-    /**
-     * Update the course status icon and title.
-     *
-     * @param {string} status Status to show.
-     */
-    CoreCoursesCoursePreviewPage.prototype.updateCourseStatus = function (status) {
-        var statusData = this.courseHelper.getCourseStatusIconAndTitleFromStatus(status);
-        this.prefetchCourseData.prefetchCourseIcon = statusData.icon;
-        this.prefetchCourseData.title = statusData.title;
-    };
-    /**
-     * Wait for the user to be enrolled in the course.
-     *
-     * @param {boolean} first If it's the first call (true) or it's a recursive call (false).
-     * @return {Promise<any>} Promise resolved when enrolled or timeout.
-     */
-    CoreCoursesCoursePreviewPage.prototype.waitForEnrolled = function (first) {
-        var _this = this;
-        if (first) {
-            this.waitStart = Date.now();
-        }
-        // Check if user is enrolled in the course.
-        return this.coursesProvider.invalidateUserCourses().catch(function () {
-            // Ignore errors.
-        }).then(function () {
-            return _this.coursesProvider.getUserCourse(_this.course.id);
-        }).catch(function () {
-            // Not enrolled, wait a bit and try again.
-            if (_this.pageDestroyed || (Date.now() - _this.waitStart > 60000)) {
-                // Max time reached or the user left the view, stop.
-                return;
-            }
-            return new Promise(function (resolve, reject) {
-                setTimeout(function () {
-                    if (!_this.pageDestroyed) {
-                        // Wait again.
-                        _this.waitForEnrolled().then(resolve);
-                    }
-                    else {
-                        resolve();
-                    }
-                }, 5000);
+                else {
+                    return _this.loginHelper.goToAddSite(true);
+                }
             });
-        });
+        }
     };
-    /**
-     * Prefetch the course.
-     */
-    CoreCoursesCoursePreviewPage.prototype.prefetchCourse = function () {
-        var _this = this;
-        this.courseHelper.confirmAndPrefetchCourse(this.prefetchCourseData, this.course).catch(function (error) {
-            if (!_this.pageDestroyed) {
-                _this.domUtils.showErrorModalDefault(error, 'core.course.errordownloadingcourse', true);
-            }
-        });
-    };
-    CoreCoursesCoursePreviewPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-courses-course-preview',template:/*ion-inline-start:"/Users/Heidi/Documents/GitHub/moodle/src/core/courses/pages/course-preview/course-preview.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="course.fullname"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="dataLoaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="dataLoaded">\n\n        <ion-list *ngIf="course">\n            <div *ngIf="course.courseImage" (click)="openCourse()" class="core-course-thumb">\n                <img [src]="course.courseImage" core-external-content alt=""/>\n            </div>\n            <a ion-item text-wrap (click)="openCourse()" [title]="course.fullname" [attr.detail-none]=" avoidOpenCourse || !canAccessCourse">\n                <core-icon name="fa-graduation-cap" fixed-width item-start></core-icon>\n                <h2><core-format-text [text]="course.fullname"></core-format-text></h2>\n                <p *ngIf="course.categoryname"><core-format-text [text]="course.categoryname"></core-format-text></p>\n                <p *ngIf="course.startdate">{{course.startdate * 1000 | coreFormatDate:"strftimedatefullshort" }} <span *ngIf="course.enddate"> - {{course.enddate * 1000 | coreFormatDate:"strftimedatefullshort" }}</span></p>\n            </a>\n\n            <ion-item text-wrap *ngIf="course.summary" detail-none>\n                <core-format-text [text]="course.summary" maxHeight="120"></core-format-text>\n            </ion-item>\n\n            <ng-container text-wrap *ngIf="course.contacts && course.contacts.length">\n                <ion-item-divider>{{ \'core.teachers\' | translate }}</ion-item-divider>\n                <a ion-item text-wrap *ngFor="let contact of course.contacts" core-user-link [userId]="contact.id" [courseId]="isEnrolled ? course.id : null" [attr.aria-label]="\'core.viewprofile\' | translate">\n                    <ion-avatar core-user-avatar [user]="contact" item-start [userId]="contact.id" [courseId]="isEnrolled ? course.id : null"></ion-avatar>\n                    <h2>{{contact.fullname}}</h2>\n                </a>\n                <ion-item-divider></ion-item-divider>\n            </ng-container>\n\n            <ion-item text-wrap *ngIf="course.customfields" detail-none>\n                <ng-container *ngFor="let field of course.customfields">\n                    <div *ngIf="field.value" class="core-customfield core-customfield_{{field.type}} core-customfield_{{field.shortname}}">\n                        <span class="core-customfieldname"><core-format-text [text]="field.name"></core-format-text></span><span class="core-customfieldseparator">: </span>\n                        <span class="core-customfieldvalue"><core-format-text [text]="field.value" maxHeight="120"></core-format-text></span>\n                    </div>\n                </ng-container>\n            </ion-item>\n\n            <core-file *ngFor="let file of course.overviewfiles" [file]="file" [component]="component" [componentId]="course.id"></core-file>\n            <div *ngIf="!isEnrolled" detail-none>\n                <ion-item text-wrap *ngFor="let instance of selfEnrolInstances">\n                    <h2>{{ instance.name }}</h2>\n                    <button ion-button block margin-top (click)="selfEnrolClicked(instance.id)">{{ \'core.courses.enrolme\' | translate }}</button>\n                </ion-item>\n            </div>\n            <ion-item text-wrap *ngIf="!isEnrolled && paypalEnabled" detail-none>\n                <h2>{{ \'core.courses.paypalaccepted\' | translate }}</h2>\n                <p>{{ \'core.paymentinstant\' | translate }}</p>\n                <button ion-button block margin-top (click)="paypalEnrol()">{{ \'core.courses.sendpaymentbutton\' | translate }}</button>\n            </ion-item>\n            <ion-item *ngIf="!isEnrolled && !selfEnrolInstances.length && !paypalEnabled">\n                <p>{{ \'core.courses.notenrollable\' | translate }}</p>\n            </ion-item>\n            <a ion-item *ngIf="canAccessCourse && downloadCourseEnabled" (click)="prefetchCourse()" detail-none [attr.aria-label]="prefetchCourseData.title | translate">\n                <core-icon *ngIf="!prefetchCourseData.downloadSucceeded && prefetchCourseData.prefetchCourseIcon != \'spinner\'" [name]="prefetchCourseData.prefetchCourseIcon" item-start></core-icon>\n                <ion-icon *ngIf="prefetchCourseData.downloadSucceeded && prefetchCourseData.prefetchCourseIcon != \'spinner\'" item-start name="cloud-done" color="success" [attr.aria-label]="\'core.downloaded\' | translate" role="status"></ion-icon>\n                <ion-spinner *ngIf="prefetchCourseData.prefetchCourseIcon == \'spinner\'" item-start></ion-spinner>\n                <h2>{{ \'core.course.downloadcourse\' | translate }}</h2>\n            </a>\n            <a ion-item (click)="openCourse()" [title]="course.fullname" *ngIf="!avoidOpenCourse && canAccessCourse">\n                <ion-icon name="briefcase" item-start></ion-icon>\n                <h2>{{ \'core.course.contents\' | translate }}</h2>\n            </a>\n            <a ion-item [href]="courseUrl" core-link [title]="course.fullname">\n                <ion-icon name="open" item-start></ion-icon>\n                <h2>{{ \'core.openinbrowser\' | translate }}</h2>\n            </a>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/Heidi/Documents/GitHub/moodle/src/core/courses/pages/course-preview/course-preview.html"*/,
+    CoreLoginInitPage = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-core-login-init',
+            templateUrl: 'init.html',
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_app__["a" /* CoreAppProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_courses__["a" /* CoreCoursesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */],
-            __WEBPACK_IMPORTED_MODULE_9__core_course_providers_options_delegate__["a" /* CoreCourseOptionsDelegate */], __WEBPACK_IMPORTED_MODULE_11__core_course_providers_helper__["a" /* CoreCourseHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_10__core_course_providers_course__["a" /* CoreCourseProvider */], __WEBPACK_IMPORTED_MODULE_12__core_course_providers_format_delegate__["a" /* CoreCourseFormatDelegate */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgZone */]])
-    ], CoreCoursesCoursePreviewPage);
-    return CoreCoursesCoursePreviewPage;
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], app["a" /* CoreAppProvider */], init["a" /* CoreInitDelegate */],
+            sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */],
+            splash_screen["a" /* SplashScreen */]])
+    ], CoreLoginInitPage);
+    return CoreLoginInitPage;
 }());
 
-//# sourceMappingURL=course-preview.js.map
+//# sourceMappingURL=init.js.map
+// CONCATENATED MODULE: ./src/core/login/pages/init/init.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var init_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var init_module_CoreLoginInitPageModule = /** @class */ (function () {
+    function CoreLoginInitPageModule() {
+    }
+    CoreLoginInitPageModule = init_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                init_CoreLoginInitPage,
+            ],
+            imports: [
+                ionic_angular["l" /* IonicPageModule */].forChild(init_CoreLoginInitPage),
+            ],
+        })
+    ], CoreLoginInitPageModule);
+    return CoreLoginInitPageModule;
+}());
+
+//# sourceMappingURL=init.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1391);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1392);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1393);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1394);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1395);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1396);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1397);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1398);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1399);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(185);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(26);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app_app = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(106);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(38);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
+var spinner_ngfactory = __webpack_require__(126);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
+var spinner = __webpack_require__(108);
+
+// CONCATENATED MODULE: ./src/core/login/pages/init/init.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_CoreLoginInitPage = [];
+var RenderType_CoreLoginInitPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreLoginInitPage, data: {} });
+
+function View_CoreLoginInitPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 13, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](1, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, 1, 9, "div", [["class", "core-bglogo"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, null, 6, "div", [["class", "core-logo"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, null, 0, "img", [["src", "assets/img/splash_logo.png"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](9, 0, null, null, 1, "ion-spinner", [], [[2, "spinner-paused", null]], null, null, spinner_ngfactory["b" /* View_Spinner_0 */], spinner_ngfactory["a" /* RenderType_Spinner */])), core["_30" /* ɵdid */](10, 114688, null, 0, spinner["a" /* Spinner */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { _ck(_v, 10, 0); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 1).statusbarPadding; var currVal_1 = core["_44" /* ɵnov */](_v, 1)._hasRefresher; _ck(_v, 0, 0, currVal_0, currVal_1); var currVal_2 = core["_44" /* ɵnov */](_v, 10)._paused; _ck(_v, 9, 0, currVal_2); }); }
+function View_CoreLoginInitPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-login-init", [], null, null, null, View_CoreLoginInitPage_0, RenderType_CoreLoginInitPage)), core["_30" /* ɵdid */](1, 49152, null, 0, init_CoreLoginInitPage, [nav_controller["a" /* NavController */], app["a" /* CoreAppProvider */], init["a" /* CoreInitDelegate */], sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */], splash_screen["a" /* SplashScreen */]], null, null)], null, null); }
+var CoreLoginInitPageNgFactory = core["_27" /* ɵccf */]("page-core-login-init", init_CoreLoginInitPage, View_CoreLoginInitPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=init.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(22);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(686);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(260);
+
+// CONCATENATED MODULE: ./src/core/login/pages/init/init.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginInitPageModuleNgFactory", function() { return CoreLoginInitPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var CoreLoginInitPageModuleNgFactory = core["_28" /* ɵcmf */](init_module_CoreLoginInitPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], CoreLoginInitPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, init_module_CoreLoginInitPageModule, init_module_CoreLoginInitPageModule, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], init_CoreLoginInitPage, [])]); });
+
+//# sourceMappingURL=init.module.ngfactory.js.map
 
 /***/ })
 
